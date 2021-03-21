@@ -6,29 +6,28 @@ using System.Threading.Tasks;
 
 namespace Barbershop
 {
-    class Customer
+    class Service
     {
-        private int cur_max_ID = 0;
-        private int ID;
-        public string name;  
-        public string last_name;
-        
+        private static int cur_max_ID = 0;
 
-        public Customer(string _name, string _last_name)
+        public string name;
+        public int price;
+        private int ID;
+
+        public Service(string _name, int _price)
         {
             name = _name;
-            last_name = _last_name;
+            price = _price;
             ID = cur_max_ID;
             cur_max_ID++;
         }
         public void print()
         {
             Console.WriteLine("_______________");
-            Console.WriteLine("ID клиента " + ID + ":");
-            Console.WriteLine(name + " " + last_name);
+            Console.WriteLine("ID услуги " + ID + ":");
+            Console.WriteLine("Название услуги " + name);
+            Console.WriteLine("Цена услуги " + price);
             Console.WriteLine("_______________");
         }
-}
-
     }
 }

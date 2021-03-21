@@ -25,8 +25,8 @@ namespace Barbershop
         {
             Console.WriteLine("_______________");
             Console.WriteLine("ID услуги " + ID + ":");
-            Console.WriteLine("Название услуги " + name);
-            Console.WriteLine("Цена услуги " + price);
+            Console.WriteLine("Название услуги: " + name);
+            Console.WriteLine("Цена услуги: " + price);
             Console.WriteLine("_______________");
         }
     }

@@ -34,7 +34,36 @@ namespace Barbershop
             }
             return -1;
         }
+        public static bool add_customer(Customer customer)
+        {
+            int customer_index = find_customer(customer);
+            if (customer_index != -1)
+            {
+                return false;
+            }
+            customers.Add(customer);
+            return true;
+        }
+        public static bool add_customer(string name, string last_name)
+        {
+            return add_customer(new Customer(name, last_name));
 
+        }
+        public static bool add_sevice(Service service)
+        {
+            int service_index = find_service(service);
+            if (service_index != -1)
+            {
+                return false;
+            }
+            services.Add(service);
+            return true;
+        }
+        public static bool add_sevice(string name, int price)
+        {
+            return add_sevice(new Service(name, price));
+        }
     }
 }
+
 

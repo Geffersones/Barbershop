@@ -11,28 +11,28 @@ namespace Barbershop
         public static List<Customer> customers = new List<Customer>();
         public static List<Service> services = new List<Service>();
 
-        public static bool find_customer(Customer customer)
+        public static int find_customer(Customer customer)
         {
             for (int i = 0; i < customers.Count; i++)
             {
                 if (customer.is_compare(customers[i]))
                 {
-                    return true;
+                    return i;
                 }
             }
-            return false;
+            return -1;
 
         }
-        public static bool find_service(Service service)
+        public static int find_service(Service service)
         {
             for (int i = 0; i < services.Count; i++)
             {
                 if (service.is_compare(services[i]))
                 {
-                    return true;
+                    return i;
                 }
             }
-            return false;
+            return -1;
         }
 
     }

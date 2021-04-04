@@ -28,6 +28,16 @@ namespace Barbershop
             Console.WriteLine("Название услуги: " + name);
             Console.WriteLine("Цена услуги: " + price);
             Console.WriteLine("_______________");
+
         }
+        public bool is_compare(Service other)
+        {
+            if ((ID == other.ID) && (name == other.name) && (price == other.price))
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

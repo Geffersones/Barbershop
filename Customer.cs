@@ -28,7 +28,16 @@ namespace Barbershop
             Console.WriteLine(name + " " + last_name);
             Console.WriteLine("_______________");
         }
-}
+
+       public bool is_compare(Customer other)
+    {
+        if ((ID == other.ID) && (name == other.name) && (last_name == other.last_name))
+            {
+                return true;
+            }
+            return false;
+    }
+
 
     }
 }

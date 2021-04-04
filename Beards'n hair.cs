@@ -59,9 +59,41 @@ namespace Barbershop
             services.Add(service);
             return true;
         }
-        public static bool add_sevice(string name, int price)
+        public static bool add_service(string name, int price)
         {
             return add_sevice(new Service(name, price));
+        }
+        public static void print()
+        {
+            if (services.Count == 0)
+            {
+                Console.WriteLine("__________________");
+                Console.WriteLine("Услуг пока что нет");
+                Console.WriteLine("__________________");
+            }
+            else
+            {
+                Console.WriteLine("Услуги");
+                for (int i = 0; i < services.Count; i++)
+                {
+                    services[i].print();
+                }
+            }
+
+            if (services.Count == 0)
+            {
+                Console.WriteLine("__________________");
+                Console.WriteLine("xКлиентов пока что нет");
+                Console.WriteLine("__________________");
+            }
+            else
+            {
+                Console.WriteLine("Клиенты:");
+                for (int i = 0; i < services.Count; i++)
+                {
+                    services[i].print();
+                }
+            }
         }
     }
 }
